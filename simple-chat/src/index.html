@@ -1,57 +1,90 @@
 <!DOCTYPE html>
-<html>
-    <head lang="en">
-        <meta charset="UTF-8">
-        <title>Send a message</title>
-    </head>
-    <body>
-        <style>
-            .form {
-                width: 100%;
-                display: inline-block;
-                border: 1px solid rgba(25, 25, 25, 0.32);
-            }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send a message</title>
+    <link rel="stylesheet" href="src/index.css">
 
-            .message {
-                color: red;
-                /* border: 1px solid; */
-                border-radius: 4px;
-                margin: 4px 0;
-                padding: 4px;
-            }
+    <!-- Материал иконки -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 
-            input[type=submit] {
-                visibility: collapse;
-            }
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="app-bar">
+    <div class="left-side">
+        <button class="icon-button">
+            <span class="container">
+                <span class="material-symbols-outlined">arrow_back</span>
+            </span>
+        </button>
+        <div class="user-data">
+            <div class="avatar">Д</div>
+            <div class="data">
+                <div class="name">Дженифер</div>
+                <div class="meta-data">была в сети 2 часа назад</div>
+            </div>
+        </div>
+    </div>
+    <button class="icon-button">
+            <span class="container">
+                <span class="material-symbols-outlined">search</span>
+            </span>
+    </button>
+    <button class="icon-button">
+            <span class="container">
+                <span class="material-symbols-outlined">more_vert</span>
+            </span>
+    </button>
+</header>
+<!--
+<header>
+    <button class="back-button">
+        <span class="material-symbols-outlined">
+            arrow_back
+        </span>
+    </button>
+    <h1>Заголовок</h1>
+</header>
+-->
 
-            input {
-                border: 0;
-                outline: none;
-                width: calc(100% - 2px);
-            }
-        </style>
-        <form class="form" action="/">
-            <div class="message"></div>
-            <input class="form-input" name="message-text" placeholder="Введите сообщение" type="text">
-        </form>
-        <script>
-            const form = document.querySelector('form');
-            const input = document.querySelector('.form-input');
-            const message = document.querySelector('.message');
+<!--<header>
+    <button class="back-button" type="">
+        <span class="material-icons">arrow_back</span>
+    </button>
+    <section class="companion">
+        <img class="companion-picture" src="https://via.placeholder.com/50" alt="profile_pic">
+        <div class="companion-meta">
+            <span class="companion-name">Dmitrii</span>
+            <span class="companion-last-online">was 1 hour ago</span>
+        </div>
+    </section>
+    <button class="search-button" type="">
+        <span class="material-icons">search</span>
+    </button>
+    <button class="more-button" type="">
+        <span class="material-icons">more_vert</span>
+    </button>
+</header>
 
-            form.addEventListener('submit', this.handleSubmit.bind(this));
-            form.addEventListener('keypress', this.handleKeyPress.bind(this));
+<section class="chat">
+    <div class="message left">
+        <span class="message-text">hello, world!</span>
+        <div class="message-meta">
+            <span class="message-date">10:10</span>
+        </div>
+    </div>
+</section>-->
 
-            function handleSubmit (event) {
-                event.preventDefault();
-                message.innerText = input.value;
-            }
+<form class="form" action="/">
+    <div class="message"></div>
+    <input class="form-input" name="message-text" placeholder="Введите сообщение" type="text">
+</form>
 
-            function handleKeyPress (event) {
-                if (event.keyCode === 13) {
-                    form.dispatchEvent(new Event('submit'));
-                }
-            }
-        </script>
-    </body>
+<script src="src/index.js"></script>
+</body>
 </html>
