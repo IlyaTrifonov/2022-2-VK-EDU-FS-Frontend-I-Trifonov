@@ -1,0 +1,9 @@
+.chat-flow {
+    order: 1;
+    align-self: stretch;
+    flex-grow: 1;
+
+    width: 100%;
+
+    background: #797979;
+}

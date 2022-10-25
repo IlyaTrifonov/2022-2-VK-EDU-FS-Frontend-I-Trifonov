@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Send a message</title>
-    <link rel="stylesheet" href="src/index.css">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="styles/index.css">
 
     <!-- Материал иконки -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="app-bar">
+<section class="app-bar">
     <div class="left-side">
         <button class="icon-button">
             <span class="container">
@@ -40,50 +40,16 @@
                 <span class="material-symbols-outlined">more_vert</span>
             </span>
     </button>
-</header>
-<!--
-<header>
-    <button class="back-button">
-        <span class="material-symbols-outlined">
-            arrow_back
-        </span>
-    </button>
-    <h1>Заголовок</h1>
-</header>
--->
-
-<!--<header>
-    <button class="back-button" type="">
-        <span class="material-icons">arrow_back</span>
-    </button>
-    <section class="companion">
-        <img class="companion-picture" src="https://via.placeholder.com/50" alt="profile_pic">
-        <div class="companion-meta">
-            <span class="companion-name">Dmitrii</span>
-            <span class="companion-last-online">was 1 hour ago</span>
-        </div>
-    </section>
-    <button class="search-button" type="">
-        <span class="material-icons">search</span>
-    </button>
-    <button class="more-button" type="">
-        <span class="material-icons">more_vert</span>
-    </button>
-</header>
-
-<section class="chat">
-    <div class="message left">
-        <span class="message-text">hello, world!</span>
-        <div class="message-meta">
-            <span class="message-date">10:10</span>
-        </div>
-    </div>
-</section>-->
-
-<form class="form" action="/">
-    <div class="message"></div>
-    <input class="form-input" name="message-text" placeholder="Введите сообщение" type="text">
-</form>
+</section>
+<section class="chat-flow">
+    Здесь будут сообщения
+</section>
+<section class="message-form">
+    <form class="form" action="/">
+        <div class="message"></div>
+        <input class="form-input" name="message-text" placeholder="Введите сообщение" type="text">
+    </form>
+</section>
 
 <script src="src/index.js"></script>
 </body>
