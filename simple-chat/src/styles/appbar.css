@@ -116,7 +116,43 @@
     text-align: center;
     letter-spacing: 0.14px;
 
+    position: relative;
+
     color: #FFFFFF;
+}
+
+.avatar img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 64px;
+    z-index: 0;
+}
+
+.avatar .badge {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    right: -2px;
+    bottom: -2px;
+
+    /* Light/Background/Paper
+
+    Reflects the background.paper variable from the theme object
+    */
+    /*background: #FFFFFF;*/
+    /*border-radius: 64px;*/
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 1;
+    /*background: #888;*/
+    background: #888;
+    border-radius: 8px;
+    border: 2px solid #8E24AA;
 }
 
 .data {

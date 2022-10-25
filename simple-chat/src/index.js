@@ -3,7 +3,7 @@ import './styles/index.css';
 
 const form = document.querySelector('form');
 const input = document.querySelector('.form-input');
-const message = document.querySelector('.message');
+const message = document.querySelector('.old-message');
 
 form.addEventListener('submit', handleSubmit.bind());
 form.addEventListener('keypress', handleKeyPress.bind());
