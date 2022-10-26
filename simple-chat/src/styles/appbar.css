@@ -3,11 +3,9 @@
     flex-direction: row;
     align-items: center;
     padding: 0 8px;
-
     gap: 8px;
 
     position: relative;
-    /*width: 444px;*/
     width: 100%;
     height: 56px;
 
@@ -29,7 +27,6 @@
     padding: 0;
     gap: 24px;
 
-    /*width: 380px;*/
     height: 48px;
 
     flex: none;
@@ -84,8 +81,7 @@
     padding: 0;
 
     position: relative;
-    /*width: 125px;*/
-    height: 52px;
+    /*height: 52px;*/
 
     gap: 16px;
 }
@@ -111,10 +107,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
-    /* or 100% */
-
     text-align: center;
-    letter-spacing: 0.14px;
 
     position: relative;
 
@@ -136,20 +129,10 @@
     right: -2px;
     bottom: -2px;
 
-    /* Light/Background/Paper
-
-    Reflects the background.paper variable from the theme object
-    */
-    /*background: #FFFFFF;*/
-    /*border-radius: 64px;*/
-
-    /* Inside auto layout */
-
     flex: none;
     order: 1;
     flex-grow: 0;
     z-index: 1;
-    /*background: #888;*/
     background: #888;
     border-radius: 8px;
     border: 2px solid #8E24AA;
@@ -168,7 +151,6 @@
     font-size: 16px;
     line-height: 150%;
     /* identical to box height, or 24px */
-    letter-spacing: 0.15px;
 
     color: #fff;
 
@@ -184,7 +166,6 @@
     font-size: 14px;
     line-height: 143%;
     /* identical to box height, or 20px */
-    letter-spacing: 0.17px;
 
     color: #cacaca;
 

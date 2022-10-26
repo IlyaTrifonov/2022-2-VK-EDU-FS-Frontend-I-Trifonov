@@ -5,26 +5,10 @@
     font-family: 'Inter', sans-serif;
 }
 
-/*html {
-    box-sizing: border-box;
-}*/
-
-/*
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-*/
-
 body {
-    /*padding: 0;*/
-    /*margin: 0;*/
     background-color: #fff;
     color: #333;
     font-size: 15px;
-    /*font-family: Helvetica, Arial, sans-serif;*/
-    /*font-family: 'Inter', sans-serif;*/
     font-weight: 400;
     line-height: 20px;
 
@@ -33,5 +17,4 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0;
 }

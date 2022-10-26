@@ -3,9 +3,7 @@ import './styles/index.css';
 
 const form = document.querySelector('.form');
 const input = document.querySelector('.form-input');
-// const message = document.querySelector('.old-message');
 
-// const senders = ['Дженифер', 'Я']
 let isMyMessage = true;
 
 const start_messages = [
@@ -32,7 +30,6 @@ const start_messages = [
 const chat = document.querySelector('.chat-flow');
 
 form.addEventListener('submit', handleSubmit.bind());
-// form.addEventListener('keypress', handleKeyPress.bind());
 
 document.addEventListener('DOMContentLoaded', getMessagesFromLocalStorage.bind())
 
@@ -51,7 +48,6 @@ function getMessagesFromLocalStorage() {
 }
 
 function saveMessageToLocalStorage(message) {
-    // console.log('save')
     let messages = localStorage.getItem('messages');
     if (!messages) {
         localStorage.setItem('messages', JSON.stringify({'all': []}));
@@ -59,12 +55,12 @@ function saveMessageToLocalStorage(message) {
     messages = localStorage.getItem('messages');
     messages = JSON.parse(messages);
     messages.all.push(message);
-    // console.log('Щя засунем в локал сторадж' + message.isMyMessage + message.sender_name);
     localStorage.setItem('messages', JSON.stringify(messages));
 }
 
 function createMessageBlock(message, save = true) {
 
+    // Bubble body
     let bubble_body = document.createElement('div');
     bubble_body.className = 'bubble-body';
 
@@ -78,6 +74,7 @@ function createMessageBlock(message, save = true) {
     message_text.innerText = message.text;
     bubble_body.append(message_text);
 
+    // Metadata
     let metadata = document.createElement('div');
     metadata.className = 'metadata';
 
@@ -111,38 +108,8 @@ function createMessageBlock(message, save = true) {
             '<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M1.06031 7.84853C4.58013 7.3457 7.3457 4.58013 7.84853 1.06031L8 0V8H0L1.06031 7.84853Z" fill="#ffffff"/></svg>'
         bubble.prepend(bubble_tail)
     }
-
-    /*
-        let message_block = document.createElement('div');
-        message_block.className = 'message right';
-        //message_block.innerText = message.text;
-
-    /!*
-        let message_text = document.createElement('div');
-        message_text.className = "message-text";
-        message_text.innerText = message.text;
-        message_block.append(message_text);
-    *!/
-
-        let message_meta = document.createElement('div');
-        let message_date = document.createElement('div');
-        let message_state = document.createElement('div');
-        message_meta.className = "message-meta";
-
-        message_date.className = "message-date";
-        message_date.innerText = message.date;
-
-        message_state.className = "message-state";
-        message_state.innerHTML = "<span class='material-icons'>done_all</span>";
-
-        message_meta.append(message_date);
-        message_meta.append(message_state);
-
-        message_block.append(message_meta)
-    */
-
     chat.prepend(bubble);
-    // console.log('Cохраняем: ' + save)
+
     if (save) {
         saveMessageToLocalStorage(message);
     }
@@ -150,7 +117,6 @@ function createMessageBlock(message, save = true) {
 
 function handleSubmit(event) {
     event.preventDefault();
-
     if (!input.value) return
 
     const sender = isMyMessage ? 'Я' : 'Дженифер';
@@ -164,27 +130,5 @@ function handleSubmit(event) {
     };
     createMessageBlock(message);
     input.value = '';
-
     isMyMessage = !isMyMessage;
 }
-
-/*
-function handleKeyPress(event) {
-    if (event.keyCode === 13) {
-        form.dispatchEvent(new Event('submit'));
-    }
-}
-*/
-
-/*
-function handleSubmit(event) {
-    event.preventDefault();
-    message.innerText = input.value;
-}
-
-function handleKeyPress(event) {
-    if (event.keyCode === 13) {
-        form.dispatchEvent(new Event('submit'));
-    }
-}
-*/
