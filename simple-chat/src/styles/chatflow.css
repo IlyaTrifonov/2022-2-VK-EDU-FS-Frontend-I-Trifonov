@@ -72,7 +72,7 @@
     flex-grow: 0;
 
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 130%;
 }
 
@@ -101,7 +101,7 @@
 
 .bubble-body .name {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 140%;
     /* identical to box height, or 20px */
 }
@@ -168,7 +168,7 @@
     flex-grow: 0;
 
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 130%;
 }
 

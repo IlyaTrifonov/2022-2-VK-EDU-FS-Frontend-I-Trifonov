@@ -168,11 +168,13 @@ function handleSubmit(event) {
     isMyMessage = !isMyMessage;
 }
 
+/*
 function handleKeyPress(event) {
     if (event.keyCode === 13) {
         form.dispatchEvent(new Event('submit'));
     }
 }
+*/
 
 /*
 function handleSubmit(event) {
