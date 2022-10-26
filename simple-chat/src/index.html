@@ -45,6 +45,7 @@
     </button>
 </section>
 <section class="chat-flow">
+<!--
     <div class="incoming-message">
         <div class="bubble-tail">
             <svg width="8"
@@ -58,6 +59,7 @@
 
         </div>
         <div class="bubble-body">
+            <span class="name">Дженифер</span>
             <span class="message-text">
                 Есть над чем задуматься: явные признаки победы институционализации и по сей день остаются уделом
                 либералов, которые жаждут быть смешаны с не уникальными данными до степени совершенной неузнаваемости,
@@ -72,8 +74,11 @@
 
         </div>
     </div>
+-->
+<!--
     <div class="outgoing-message">
         <div class="bubble-body">
+            <span class="name">Я</span>
             <span class="message-text">
                 Разнообразный и богатый опыт говорит нам, что высокотехнологичная концепция общественного
                 уклада обеспечивает широкому кругу (специалистов) участие в формировании как самодостаточных,
@@ -85,7 +90,6 @@
                     <span class="material-symbols-outlined">done_all</span>
                 </div>
             </div>
-
         </div>
         <div class="bubble-tail">
             <svg width="8"
@@ -98,27 +102,42 @@
             </svg>
         </div>
     </div>
+-->
 
 
     <!--    <img src="https://images.unsplash.com/photo-1485893086445-ed75865251e0" alt="Аватар">-->
 </section>
 <section class="message-form">
-    <div class="left-side">
-        <input class="form-input" name="message-text" placeholder="Введите сообщение" type="textarea">
-    </div>
-    <button class="icon-button">
+    <form class="form" action="/">
+        <div class="left-side">
+            <input class="form-input"
+                   name="message-text"
+                   placeholder="Введите сообщение"
+                   type="textarea"
+                   autocomplete="off">
+        </div>
+        <button class="icon-button">
             <span class="container">
                 <span class="material-symbols-outlined">attachment</span>
             </span>
-    </button>
-
-
-<!--
-    <form class="form" action="/">
-        <div class="old-message"></div>
-        <input class="form-input" name="message-text" placeholder="Введите сообщение" type="text">
+        </button>
     </form>
--->
+
+    <!--
+        <button class="icon-button">
+                <span class="container">
+                    <span class="material-symbols-outlined">attachment</span>
+                </span>
+        </button>
+    -->
+
+
+    <!--
+        <form class="form" action="/">
+            <div class="old-message"></div>
+            <input class="form-input" name="message-text" placeholder="Введите сообщение" type="text">
+        </form>
+    -->
 </section>
 
 <script src="src/index.js"></script>
