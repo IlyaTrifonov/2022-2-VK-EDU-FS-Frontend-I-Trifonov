@@ -1,0 +1,143 @@
+.chat-flow {
+    order: 1;
+    align-self: stretch;
+    flex-grow: 1;
+    padding: 16px 16px;
+
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    overflow-y: auto;
+    gap: 16px;
+    background: #F8F8F8;
+
+    flex-direction: column-reverse;
+}
+
+.incoming-message {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0 8px 0 0;
+
+    position: relative;
+}
+
+.incoming-message .bubble-tail {
+    width: 8px;
+    height: 8px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.bubble-tail svg {
+    position: absolute;
+}
+
+.incoming-message .bubble-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+
+    background: #ffffff;
+    border-radius: 8px 8px 8px 0;
+
+    gap: 4px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.bubble-body .metadata {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+
+    gap: 8px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: flex-end;
+    flex-grow: 0;
+
+    color: #717982;
+}
+
+.bubble-body .metadata .status {
+    /* Это костыль, нужно поправить на дз про CSS */
+    height: 24px;
+    color: #904ca9;
+}
+
+.bubble-body .name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    /* identical to box height, or 20px */
+}
+
+
+/* Исходящие */
+.outgoing-message {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0 0 0 8px;
+
+    align-self: flex-end;
+
+    position: relative;
+}
+
+.outgoing-message .bubble-tail {
+    width: 8px;
+    height: 8px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.outgoing-message .bubble-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+
+    gap: 4px;
+
+    background: #fadeff;
+    border-radius: 8px 8px 0 8px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.message-text {
+    max-width: 400px;
+    line-height: 150%;
+    color: #20303C;
+}
